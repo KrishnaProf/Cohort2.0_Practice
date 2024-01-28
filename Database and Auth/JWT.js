@@ -8,7 +8,7 @@ const passwordSchema = zod.string().min(6);
 
 /**
  * Generates a JWT for a given username and password.
- *
+ 
  * @param {string} username - The username to be included in the JWT payload.
  *                            Must be a valid email address.
  * @param {string} password - The password to be included in the JWT payload.
