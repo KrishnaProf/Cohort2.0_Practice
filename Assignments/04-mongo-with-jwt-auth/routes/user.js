@@ -11,8 +11,14 @@ router.post('/signin', (req, res) => {
     // Implement admin signup logic
 });
 
-router.get('/courses', (req, res) => {
+router.get('/courses', async (req, res) => {
     // Implement listing all courses logic
+    const response = await Course.find({});
+
+    res.json({
+        Courses: response
+    });
+
 });
 
 router.post('/courses/:courseId', userMiddleware, (req, res) => {
